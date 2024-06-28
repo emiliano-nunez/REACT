@@ -12,5 +12,5 @@ El objetivo principal de este repositorio es tener un registro de mi progreso y 
 - Ejemplos de código
 - Proyectos personales
 
-Licencia
+### Licencia
 Este proyecto está bajo la Licencia MIT. (Cualquiera puede usarlo y modificarlo sin necesidad de mención o atribución. Pero debo aclarar que son actividades realizadas en la diplomatura y las actividades están dirigidas por el profesor)
