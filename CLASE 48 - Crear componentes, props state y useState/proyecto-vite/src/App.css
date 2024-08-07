@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  color: red;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+}

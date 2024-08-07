@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  gap: 1em;
+
+  p {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  button {
+    border: none;
+    background-color: #0000;
+  }
+}
