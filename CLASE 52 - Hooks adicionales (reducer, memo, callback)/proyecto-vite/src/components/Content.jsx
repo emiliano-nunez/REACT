@@ -1,33 +1,42 @@
-import { useContext, useEffect, useState } from "react"
-import { authContext } from "../context/AuthProvider"
+import { useState, useTransition } from "react"
+//import { authContext } from "../context/AuthProvider"
 
 const Content = (props) => {
-    const value = useContext(authContext)
-
-    console.log(value)
-
     const [parrafo, setParrafo] = useState ()
 
-    // El primer parametro en el useEffect es un callBack y el segundo es una lista de dependencias
-    useEffect(() => {
-        console.log('Componente Content montado')
+    const [isLoading, startTransition] = useTransition(false)
+    // const value = useContext(authContext)
 
-        // Desmontar el componente
-        return () => {
-            console.log('Componente Content desmontado')
-        }
-    }, [])
+    // console.log(value)
 
-    useEffect(() => {
-        console.log('Componente Content actualizado')
-    }, [props, parrafo])
+
+
+    // // El primer parametro en el useEffect es un callBack y el segundo es una lista de dependencias
+    // useEffect(() => {
+    //     console.log('Componente Content montado')
+
+    //     // Desmontar el componente
+    //     return () => {
+    //         console.log('Componente Content desmontado')
+    //     }
+    // }, [])
+
+    // useEffect(() => {
+    //     console.log('Componente Content actualizado')
+    // }, [props, parrafo])
 
     const toggleParrafo = () => {
-        if (parrafo === '') {
-            setParrafo('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque at consequatur et dignissimos est, fugiat vero nam laborum quasi repellendus soluta aspernatur doloremque? Provident iusto maxime culpa ipsam rerum')
-        } else {
-            setParrafo('')
-        }
+        startTransition(() => {
+            if (parrafo === '') {
+                setParrafo('Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque at consequatur et dignissimos est, fugiat vero nam laborum quasi repellendus soluta aspernatur doloremque? Provident iusto maxime culpa ipsam rerum')
+            } else {
+                setParrafo('')
+            }
+        })
+    }
+
+    if (isLoading) {
+        <h2>Cambiando párrafo...</h2>
     }
 
     return (
