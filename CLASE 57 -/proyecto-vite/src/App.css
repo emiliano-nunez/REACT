@@ -1,0 +1,139 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5e6cc;
+  color: #6b4423;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  background-color: #d9b38c;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #6b4423;
+}
+
+/* Enlaces */
+a, link {
+  color: #6b4423;
+  text-decoration: none;
+}
+
+a:hover, link:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Botones */
+button {
+  background-color: #d9b38c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b38a63;
+}
+
+/* Formularios */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+nav {
+  background-color: #6b4423;
+  color: #fff;
+  text-align: center;
+  height: 5em;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a, nav link {
+  color: #fff;
+  font-size: 1.6em;
+  padding: 3em 1em;
+  margin: 0 10px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: .3em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  margin-bottom: .6em;
+}
+
+.btn-detail {
+  background-color: #6b4423;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.detail {
+  margin: 1em auto;
+  text-align: center;
+  max-width: 800px;
+  background-color: #f9f9f9; /* Fondo ligeramente más claro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  h1 {
+    text-align: left;
+    font-size: 24px;
+    color: #6b4423;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  img {
+    width: 10em;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave para la imagen */
+  }
+}
