@@ -1,18 +1,13 @@
 import { useEffect, useState } from "react"
 import Card from "./Card"
-import Button from "./Button"
 import Input from "./Input"
 
 const Content = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    const [hizoClick, setHizoClick] = useState(false)
     const [filterProducts, setFilterProducts] = useState([])
 
-    const handleButtonClick = () => {
-        setHizoClick(true)
-    }
 
     const handleProductsFilter = (e) => {
         const inputValue = e.target.value
@@ -41,9 +36,6 @@ const Content = () => {
             <div>
                 <Input handleChange={handleProductsFilter}/>
             </div>
-            <Button handleClick={handleButtonClick} text={'ola'}/>
-            <Button text={'lola'}/>
-            <p>Hizo Click: {hizoClick ? 'si' : 'no'}</p>
             {filterProducts.length > 0
                 ? filterProducts.map(item => <Card key={item.id} product={item}/>)
                 : products.map(item => <Card key={item.id} product={item}/>)
