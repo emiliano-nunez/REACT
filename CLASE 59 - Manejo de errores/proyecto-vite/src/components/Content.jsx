@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Card from "./Card"
 import Input from "./Input"
+import { errorContext } from "../context/ErrorContext"
 
 const Content = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const [filterProducts, setFilterProducts] = useState([])
-
+    const { showError } = useContext(errorContext)
 
     const handleProductsFilter = (e) => {
         const inputValue = e.target.value
@@ -23,7 +24,7 @@ const Content = () => {
         fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
             .then(data => setProducts(data))
-            .catch(error => console.log(error + "Error al obtener la ifo de los productos"))
+            .catch(error => showError('Error al obtener los productos'))
             .finally(() => setLoading(false))
     }, [])
 
